@@ -1,0 +1,17 @@
+.mission {
+  p {
+  }
+
+  @media ($tablet) {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  img {
+    display: none;
+
+    @media ($tablet) {
+      display: block;
+    }
+  }
+}

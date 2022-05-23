@@ -1,0 +1,145 @@
+---
+title: ассоциация музеев дальнего востока
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="map">
+  <div class="map__wrapper">
+    <h1 class="page-title  page-title--main">{{title}} </h1>
+    <div class="map__text">
+      <p>Краткий текст об организации описание ассоциации краткий текст краткий текст ассоциации краткий текст об
+        организации
+        описание ассоциации краткий текст описание текст ассоциации краткий текст об организации.</p>
+    </div>
+  </div>
+  <div class="map__interactive">
+    <div id="map"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__wrapper">
+    <header class="section__head">
+      <h2>Миссия ассоциации</h2>
+      <a href="textpage.html">подробнее</a>
+    </header>
+    <div class="section__text  mission">
+      <p>Ассоциация объединяет музейных специалистов Дальневосточного федерального округа с целью развития музейного
+        дела,
+        повышения профессионального уровня музейных работников и популяризации дальневосточных музеев.</p>
+      <img src="images/mission-placeholder.jpg" alt="Какое-то описание">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__wrapper">
+    <header class="section__head">
+      <h2>Новости</h2>
+      <a href="news.html">все</a>
+    </header>
+    <section class="news">
+      <div class="news__slider  swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide news__item  news__item--fund">
+            <a href="news-item.html">
+              <div class="news__type">Фонд</div>
+              <div class="news__photo">
+                <img src="images/news-photo-1.jpg" alt="Описание фото" loading="lazy">
+              </div>
+              <div class="news__item-date">21 января 2022</div>
+              <div class="news__item-descr">
+                <p>Подписано соглашение о долгосрочном партнёрстве между Ассоциацией Дальневосточных музеев и компанией
+                  Panasonic Россия</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide news__item  news__item--association">
+            <a href="news-item.html">
+              <div class="news__type">ассоциация</div>
+              <div class="news__photo">
+                <img src="images/news-photo-2.jpg" alt="Описание фото" loading="lazy">
+              </div>
+              <div class="news__item-date">21 января 2022 - 12 марта 2022</div>
+              <div class="news__item-descr">
+                <p>Подписано соглашение о долгосрочном партнёрстве c компанией Microsoft Россия</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide news__item"><a href="news-item.html">
+              <div class="news__type">Фонд</div>
+              <div class="news__photo">
+                <img src="images/news-photo-1.jpg" alt="Описание фото" loading="lazy">
+              </div>
+              <div class="news__item-date">21 января 2022</div>
+              <div class="news__item-descr">
+                <p>Подписано соглашение о долгосрочном партнёрстве между Ассоциацией Дальневосточных музеев и компанией
+                  Panasonic Россия
+                  (заголовок новости)</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide news__item">
+            <a href="news-item.html">
+              <div class="news__type">ассоциация</div>
+              <div class="news__photo">
+                <img src="images/news-photo-2.jpg" alt="Описание фото" loading="lazy">
+              </div>
+              <div class="news__item-date">21 января 2022 - 12 марта 2022</div>
+              <div class="news__item-descr">
+                <p>Подписано соглашение о долгосрочном партнёрстве c компанией Microsoft Россия</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="swiper-controls">
+          <button class="swiper-prev-btn" type="button">
+            <svg width="12" height="14" viewBox="0 0 14 12">
+              <use xlink:href="images/sprite_auto.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <div class="swiper-pagination"></div><button class="swiper-next-btn" type="button">
+            <svg width="12" height="14" viewBox="0 0 14 12">
+              <use xlink:href="images/sprite_auto.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="main-banner">
+  <div class="main-banner__content">
+    <h2 class="main-banner__title">Вступите
+      в ассоциацию, заполнив анкету</h2>
+    <a class="main-banner__link" href="#">Вступить в ассоциацию</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__wrapper">
+    <div class="section__head">
+      <h2>партнеры</h2>
+      <a href="partners.html">подробнее</a>
+    </div>
+
+    <section class="partners">
+      <ul class="partners__list">
+        {% for item in range(0, 3) -%}
+        <li class="partners__item"><a href="#" class="partners__link"><img src="images/partners/kultura_rf.svg"
+              alt="Логотип партнера Название партнера" loading="lazy"></a></li>
+        <li class="partners__item"><a href="#" class="partners__link"><img src="images/partners/minkult_rus_logo.svg"
+              alt="Логотип партнера Название партнера" loading="lazy"></a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+  </div>
+</section>
+
+{% endblock %}

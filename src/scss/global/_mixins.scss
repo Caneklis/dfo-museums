@@ -1,0 +1,59 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    src: url("../fonts/" + $path + ".woff2") format("woff2"),
+      url("../fonts/" + $path + ".woff") format("woff");
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop * 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile * 1px) {
+    @content;
+  }
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col] 1fr);
+  column-gap: 40px;
+}
+
+@mixin wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: calc(120 / 1920 * 100%);
+  padding-right: calc(120 / 1920 * 100%);
+
+  @media ($mobile) {
+    padding-left: calc(20 / 375 * 100%);
+    padding-right: calc(20 / 375 * 100%);
+  }
+}

@@ -1,0 +1,51 @@
+.social-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.social-share__items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media ($large) {
+    gap: 40px;
+  }
+}
+
+.social-share__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border: 2px solid var(--base-black);
+  color: var(--base-black);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  svg {
+    max-height: 20px;
+  }
+
+  &:hover {
+    background-color: var(--base-black);
+    color: var(--base-white);
+  }
+
+  @media ($tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: 374px) {
+    width: 40px;
+    height: 40px;
+    svg {
+      max-height: 15px;
+    }
+  }
+}

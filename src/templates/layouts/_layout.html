@@ -1,0 +1,108 @@
+{% import "../_partials/_mixins.html" as mixins %}
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Primary Meta Tags -->
+  <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+  <meta type="description" content="{% if description %}{{ description }}{% else %}Description{% endif %}">
+  <link rel="stylesheet" media="all" href="{{ base_path }}css/style.min.css" />
+  {# {% include "../_partials/_media-tags.html" %} #}
+  <link rel="icon" href="{{ base_path }}favicon/favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="{{ base_path }}favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ base_path }}favicon/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="manifest" href="{{ base_path }}favicon/manifest.webmanifest">
+</head>
+
+<body class="page__body">
+  {% include '../_partials/_header.html' %}
+
+  <!-- BEGIN content -->
+  <main class="page__main">
+    {% block content %}{% endblock %}
+  </main>
+  <!-- END content -->
+
+  {% include '../_partials/_footer.html' %}
+
+  <!-- BEGIN scripts -->
+  <script src="{{ base_path }}js/main.min.js"></script>
+  <!-- Скрипты только для страницы музея  -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script>
+    if (document.getElementById('iframe-map')) {
+      ymaps.ready(init);
+
+      var placemarks = [
+
+        {
+          latitude: 43.11628557450809,
+          longitude: 131.882107,
+          balloonContent: [
+            '<div class="map__balloon">' +
+            '<div class="baloon__info">' +
+            '' +
+            '<div class="baloon__info">' +
+            'г. Владивосток, ул. Светланская, 20' +
+            '</div>' +
+            '<div class="baloon__info">' +
+            '' +
+            '</div>' +
+            '<div class="baloon__info">' +
+            'Директор ФИО' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+          ]
+        },
+
+      ],
+        geoObjects = [];
+
+      function init() {
+        var map = new ymaps.Map('iframe-map', {
+          center: [43.11628557450809, 131.882107],
+          zoom: 17,
+          controls: ["zoomControl"]
+        });
+
+        for (var i = 0; i < placemarks.length; i++) {
+          geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+            {
+              //hintContent: placemarks[i].hintContent,
+              balloonContent: placemarks[i].balloonContent.join('')
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: '/images/marker.svg',
+              iconImageSize: [62, 82],
+              iconImageOffset: [-31, -41],
+            });
+        }
+
+        var clusterer = new ymaps.Clusterer({
+          clusterIcons: [
+            {
+              //href: 'img/burger.png',
+              size: [10, 10],
+              offset: [-50, -50]
+            }
+          ],
+          clusterIconContentLayout: null
+        });
+
+        map.geoObjects.add(clusterer);
+        clusterer.add(geoObjects);
+      }
+    }
+
+  </script>
+  <!-- Скрипты только для страницы музея  -->
+  <!-- END scripts -->
+
+</body>
+
+</html>

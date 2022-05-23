@@ -1,0 +1,57 @@
+<div class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__logo logo">
+      <a class="logo__link  logo__link--footer" href="#"><img src="images/logo-footer.svg" width="152" height="130px"
+          alt="Логотип ассоциации"></a>
+    </div>
+
+    <ul class="footer__top">
+      <li class="footer__top-item"><a class="footer__link" href="tel:89999999999">8 999 999 99 99</a></li>
+      <li class="footer__top-item"><a class="footer__link" href="mailto:email@yandex.ru">email@yandex.ru</a></li>
+      <li class="footer__top-item"><a class="footer__link" href="https://telegram.me/telegram_account_name">telegram</a>
+      </li>
+      <li class="footer__top-item"><a class="footer__link  footer__link--icons" href="#">Вступить в ассоциацию</a></li>
+    </ul>
+
+    <ul class="footer__menu">
+      {% import "data/_data.html" as menu %}
+      {% for item in menu.list %}
+      <li class="footer__menu-item">
+        <a class="footer__link" href="{{item.link}}">{{item.title}}</a>
+        {% endfor %}
+    </ul>
+
+    <div class="footer__subscribe  subscribe">
+      <p>Подписаться на рассылку</p>
+      <form class="subscribe__form" action="">
+        <input class="subscribe__input" type="email" name="email" id="email" placeholder="ваш e-mail">
+        <button class="subscribe__submit-btn" type="submit"
+          aria-label="Открыть меню">{{mixins.icon('arrow-right')}}</button>
+      </form>
+    </div>
+
+    <div class="footer__user-block">
+      <div class="search">
+        <button class="footer__btn  search__open-btn">
+          <svg class="icon icon--search">
+            <use xlink:href="images/sprite_auto.svg#icon-search"></use>
+          </svg>
+        </button>
+      </div>
+      <a class="footer__btn" href="#">
+        <svg class="icon icon--contrast">
+          <use xlink:href="images/sprite_auto.svg#icon-contrast"></use>
+        </svg>
+      </a>
+    </div>
+
+    <div class="footer__copy">
+      <div class="footer__copy-left">
+        <p>© ассоциация музеев дальнего востока 2022</p>
+      </div>
+      <div class="footer__copy-right">
+        <p><a href="#">правила пользования материалами сайта</a></p>
+      </div>
+    </div>
+  </div>
+</div>

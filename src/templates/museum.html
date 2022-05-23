@@ -1,0 +1,364 @@
+---
+title: музей истории дальнего востока им. в.к. арсеньева
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="museum">
+  <div class="museum__wrapper">
+    <div class="museum__nav">
+      <a href="index.html"><svg width="10" height="12">
+          <use xlink:href="images/sprite_auto.svg#icon-arrow-left"></use>
+        </svg> На главнуя</a>
+      <a href="museums.html">Все музеи <svg width="10" height="12">
+          <use xlink:href="images/sprite_auto.svg#icon-arrow-right"></use>
+        </svg></a>
+    </div>
+    <div class="museum__photo">
+      <img class="museum__logo" src="images/museums/museum-logo.svg" alt="Логотип музея {{title}}">
+      <img src="images/museums/museum-photo.jpg" alt="Фотография музея {{title}}" loading="lazy">
+    </div>
+
+    <div class="museum__head-text">
+      <h1>{{title}}</h1>
+      <p>Музей родился в прибрежном городе Владивостоке более 130 лет назад. Он рос вместе с городом, наполнялся
+        экспонатами,
+        присоединял новые филиалы и площадки, накапливал опыт и неизменно собирал талантливых и неравнодушных людей —
+        настоящих
+        профессионалов.</p>
+      <ul class="museum__head-links">
+        <li class="museum__head-item">
+          <a href="mailto:office@arseniev.org">office@arseniev.org</a>
+        </li>
+        <li class="museum__head-item">
+          <a href="#">сайт музея
+            <svg width="18" height="18" viewBox="0 0 18 18">
+              <use xlink:href="images/sprite_auto.svg#icon-arrow-top-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="museum__head-item">
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="26" height="26">
+                  <use xlink:href="images/sprite_auto.svg#icon-inst"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="36" height="21">
+                  <use xlink:href="images/sprite_auto.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="17" height="32">
+                  <use xlink:href="images/sprite_auto.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="textpage">
+  <div class="textpage__wrapper">
+    <div class="textpage__content">
+      <div class="textpage__left">
+        <h2 class="textpage__section-title">музей на карте</h2>
+      </div>
+      <div class="textpage__right">
+        <address>г. Владивосток, ул. Светланская, 20</address>
+      </div>
+      <div class="textpage__iframe">
+        <div id="iframe-map"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="textpage">
+  <div class="textpage__wrapper">
+    <div class="textpage__content">
+      <div class="textpage__left">
+        <h2 class="textpage__section-title">О музее</h2>
+      </div>
+      <div class="textpage__right">
+        <h3>Сейчас у Музея четыре площадки во Владивостоке, и ещё пять — в городах и сёлах Приморского края. От Главного
+          корпуса до
+          самого дальнего филиала Музея на автомобиле нужно ехать пять часов — и это чудесная возможность увидеть
+          Приморье,
+          уникальная природа которого поражает даже тех, кто провёл здесь всю жизнь.</h3>
+
+        <p>Коллекционирование и экспонирование свидетельств старины – не единственная задача Музея. Помимо этого, он
+          общается с
+          музеями других городов, обменивается опытом и экспонатами. Чего стоят, например, Дальневосточная конференция
+          региональных музеев или проект «Коллекционируя Россию», в рамках которого Владивосток увидел уникальные
+          экспонаты из
+          Перми, Мурома, Великого Новгорода и Иваново. К тому же, в Музее постоянно проходят мероприятия, познавательные
+          и
+          развлекательные программы для детей и взрослых, киновстречи, лекции, круглые столы, на которых обсуждаются
+          самые разные
+          темы.</p>
+
+        <p>Коллекционирование и экспонирование свидетельств старины – не единственная задача Музея. Помимо этого, он
+          общается с
+          музеями других городов, обменивается опытом и экспонатами. Чего стоят, например, Дальневосточная конференция
+          региональных музеев или проект «Коллекционируя Россию», в рамках которого Владивосток увидел уникальные
+          экспонаты из
+          Перми, Мурома, Великого Новгорода и Иваново. К тому же, в Музее постоянно проходят мероприятия, познавательные
+          и
+          развлекательные программы для детей и взрослых, киновстречи, лекции, круглые столы, на которых обсуждаются
+          самые разные
+          темы.</p>
+      </div>
+    </div>
+
+
+    <div class="textpage__slider  swiper" dir="rtl">
+      <div class="swiper-controls">
+        <button class="swiper-next-btn" type="button">
+          <svg width="12" height="14" viewBox="0 0 14 12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+        <div class="swiper-pagination"></div>
+        <button class="swiper-prev-btn" type="button">
+          <svg width="12" height="14" viewBox="0 0 14 12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="swiper-wrapper">
+        {% for item in range(0, 4) -%}
+        <div class="swiper-slide">
+          <div class="textpage__slider-content">
+            <img src="images/video.jpg" alt="">
+            <p>Выставка «Все сложилось здесь…». К 110-летию В.Ю. Янковского</p>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="textpage__wrapper">
+    <div class="textpage__content">
+      <div class="textpage__left">
+        <h2 class="textpage__section-title">главный экспонат</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="textpage__full">
+    <div class="main-item">
+      <div class="main-item__photo">
+        <div class="main-item__photo-content">
+          <img src="https://via.placeholder.com/430x430/" alt="">
+        </div>
+      </div>
+      <div class="main-item__list">
+        <ul>
+          <li>
+            <a href="#">Аудиогид <svg width="10" height="10" viewBox="0 0 10 10">
+                <use xlink:href="images/sprite_auto.svg#icon-arrow-top-right"></use>
+              </svg></a>
+          </li>
+          <li>
+            <a href="#">Медиагид <svg width="10" height="10" viewBox="0 0 10 10">
+                <use xlink:href="images/sprite_auto.svg#icon-arrow-top-right"></use>
+              </svg></a>
+          </li>
+          <li>
+            <a href="#">О предмете на сайте <svg width="10" height="10" viewBox="0 0 10 10">
+                <use xlink:href="images/sprite_auto.svg#icon-arrow-top-right"></use>
+              </svg></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-item__text">
+        <h2>Декоративная тарелка «Бой при Чемульпо»</h2>
+        <h3>Один из боёв Русско-японской войны 1904–1905 годов</h3>
+        <p>Подъём патриотического движения после начала Русско-японской войны проявлялся в самых разных формах.
+          Сцены боёв, образы
+          героев войны и портреты военачальников печатались в прессе, изображались художниками в манере лубочных
+          картин,
+          становились украшением предметов разного назначения. Промышленники и предприниматели охотно декорировали
+          свою продукцию
+          изображениями с сюжетами Русско-японской войны как с целью получения дополнительной прибыли, так и из
+          искренних
+          патриотических чувств.</p>
+        <p>Одним из таких предприимчивых деятелей стал коммерции советник Матвей Сидорович Кузнецов, владелец
+          «Товарищества
+          производства фарфоровых и фаянсовых изделий М.С. Кузнецова». В фондах Музея истории Дальнего Востока
+          хранится
+          декоративная тарелка, выпущенная на его фабрике.</p>
+        <p>Основа композиции декоративной тарелки «Бой при Чемульпо» — изображение боя крейсера «Варяг» и
+          канонерской лодки
+          «Кореец» с японской эскадрой у корейского порта Чемульпо 27 января 1904 года. По бортам тарелка украшена
+          изображениями
+          портретов главнокомандующих всеми сухопутными и морскими силами на Дальнем Востоке во время
+          Русско-японской войны:
+          адмирала Е.И. Алексеева, генерала О.М. Куропаткина, генерала М.П. Линевича. Между портретами изображены
+          различные сцены
+          фронтовой жизни: бой знамённой роты 11-го Восточно-Сибирского полка под Тюренченом, русские солдаты на
+          бивуаке после боя
+          под Вафангоу, обстрел японской пехотой пассажирского поезда с санитарными вагонами под флагом Красного
+          Креста возле
+          станции Вафандян.</p>
+        <p>Матвей Кузнецов, создатель предприятия по выпуску фаянса и фарфора, был выходцем из рода
+          предпринимателей, со второй
+          половины XVIII века связанных с производством фарфоровых изделий в районе знаменитой деревни Гжель.
+          Основатель этой
+          династии, крестьянин Яков Васильевич Кузнецов, в 1810 году выкупил себя у помещика и начал собственное
+          дело — открыл
+          небольшой завод по производству фарфора вблизи деревни Ново-Харитоново и вскоре добился больших успехов на
+          торговом
+          поприще. Его правнук Матвей Сидорович родился в 1846 году. Он окончил Рижское коммерческое училище и 1864
+          году вступил в
+          управление делами. С самого начала своей карьеры Кузнецов проявлял себя как грамотный управленец:
+          продукция
+          принадлежавших ему заводов пользовалась большим спросом на рынке.</p>
+
+        <div class="main-item__slider-wrapper">
+
+          <button class="main-item__items-slider-next-btn" type="button">
+            <svg width="74" height="75" viewBox="0 0 74 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M37 1.57461C56.8815 1.57461 73 17.7049 73 37.6042C73 57.5035 56.8815 73.6338 37 73.6338C17.1185 73.6338 0.999999 57.5035 0.999998 37.6042C0.999998 17.7049 17.1185 1.57461 37 1.57461Z"
+                stroke="#898989" stroke-width="2" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.9922 38.6273C22.9922 38.1699 23.1737 37.7312 23.4969 37.4078C23.8201 37.0843 24.2584 36.9026 24.7155 36.9026L44.6815 36.9026L37.2817 29.5003C37.1215 29.34 36.9944 29.1496 36.9077 28.9401C36.821 28.7306 36.7763 28.506 36.7763 28.2793C36.7763 28.0525 36.821 27.8279 36.9077 27.6184C36.9944 27.4089 37.1215 27.2186 37.2817 27.0582C37.4419 26.8978 37.6322 26.7706 37.8415 26.6839C38.0508 26.5971 38.2752 26.5524 38.5018 26.5524C38.7284 26.5524 38.9528 26.5971 39.1621 26.6839C39.3715 26.7706 39.5617 26.8978 39.7219 27.0582L50.0617 37.4062C50.2221 37.5664 50.3495 37.7567 50.4363 37.9663C50.5232 38.1758 50.5679 38.4004 50.5679 38.6273C50.5679 38.8541 50.5232 39.0788 50.4363 39.2883C50.3495 39.4978 50.2221 39.6881 50.0617 39.8483L39.7219 50.1964C39.5617 50.3567 39.3715 50.4839 39.1621 50.5707C38.9528 50.6575 38.7284 50.7021 38.5018 50.7021C38.2752 50.7021 38.0508 50.6575 37.8415 50.5707C37.6322 50.4839 37.4419 50.3567 37.2817 50.1964C36.9581 49.8725 36.7763 49.4333 36.7763 48.9753C36.7763 48.7485 36.821 48.524 36.9077 48.3145C36.9944 48.105 37.1215 47.9146 37.2817 47.7542L44.6815 40.352L24.7155 40.352C24.2584 40.352 23.8201 40.1702 23.4969 39.8468C23.1737 39.5234 22.9922 39.0847 22.9922 38.6273Z"
+                fill="white" />
+            </svg>
+          </button>
+          <div class="main-item__items-slider  swiper">
+            <div class="swiper-wrapper">
+              {% for item in range(0, 2) -%}
+              <div class="main-item__items-slider-item  swiper-slide">
+                <a href="#"><img src="images/main-item/main-item-pic-1.jpg" alt=""></a>
+              </div>
+              <div class="main-item__items-slider-item  swiper-slide">
+                <a href="#"><img src="images/main-item/main-item-pic-2.jpg" alt=""></a>
+              </div>
+              <div class="main-item__items-slider-item  swiper-slide">
+                <a href="#"><img src="images/main-item/main-item-pic-3.jpg" alt=""></a>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="textpage__wrapper">
+    <div class="textpage__content">
+      <div class="textpage__left">
+        <h2 class="textpage__section-title">Поделиться</h2>
+      </div>
+      <div class="textpage__right">
+        <div class="social-share">
+          <script>
+            const createShareHtml = function (title, shareData) {
+              let anchorList = [];
+              const anchorTemplate = function (item) {
+                return `<a class="social-share__link" href="${item.href}" target="_blank" rel="noopener">
+        <svg class="social-share__icon">
+          <use xlink:href="images/sprite_auto.svg#icon-${item.icon}"></use>
+        </svg>
+        <span class="visually-hidden">${item.title}</span>
+        </a>`;
+                '<a href="' +
+                  item.href +
+                  '" target="_blank" rel="noopener">' +
+                  item.title +
+                  "</a>"
+              };
+              const wrapperTemplate = function (title, anchorList) {
+                return (
+                  // '<div class="social-share__title">' +
+                  // title +
+                  // `<span class="social-share__active header__lang-link">share</span>` +
+                  '</div><div class="social-share__items">' +
+                  anchorList.join("") +
+                  "</div>"
+                );
+              };
+              shareData.forEach(function (item) {
+                anchorList.push(anchorTemplate(item));
+              });
+              return wrapperTemplate(title, anchorList);
+            };
+
+            const $socialShare = document.querySelector(".social-share");
+            if ($socialShare) {
+              const url = encodeURIComponent(
+                location.protocol + "//" + location.host + location.pathname
+              );
+              const title = encodeURIComponent(document.title);
+              const twitterUserName = "theartsmuseum"; //для твиттера
+              const shareData = [
+                {
+                  title: "ВКонтакте",
+                  href: "https://vk.com/share.php?url=" + url,
+                  icon: "vk",
+                },
+                {
+                  title: "Facebook",
+                  href: "https://www.facebook.com/sharer/sharer.php?u=" + url,
+                  icon: "fb",
+                },
+                {
+                  title: "Twitter",
+                  href:
+                    "https://twitter.com/intent/tweet?text=" +
+                    title +
+                    "&url=" +
+                    url +
+                    "&via=" +
+                    twitterUserName,
+                  icon: "tw",
+                },
+                {
+                  title: "Ок",
+                  href: "https://connect.ok.ru/offer?url=" + url + "&text=" + title,
+                  icon: "ok",
+                },
+                {
+                  title: "Telegram",
+                  href: "https://t.me/share/url?url=" + url + "&text=" + title,
+                  icon: "tg",
+                },
+              ];
+              const $html = createShareHtml("", shareData);
+              $socialShare.innerHTML = $html;
+            }
+          </script>
+
+
+          <div class="copylink">
+            <button class="copylink__btn">
+              Скопировать ссылку
+            </button>
+            <div class="copylink__text">Ссылка скопирована</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

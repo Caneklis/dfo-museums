@@ -1,0 +1,44 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.swiper-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+
+  @media ($tablet) {
+    display: none;
+  }
+}
+.swiper-pagination-fraction {
+  position: static;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 10px;
+  color: var(--base-black);
+  width: max-content;
+}
+.swiper-prev-btn,
+.swiper-next-btn {
+  position: static;
+  display: flex;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+}

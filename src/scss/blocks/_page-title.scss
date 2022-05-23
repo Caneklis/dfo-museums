@@ -1,0 +1,22 @@
+.page-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #303030;
+
+  @media ($tablet) {
+    font-size: 45px;
+  }
+
+  @media ($desktop) {
+    font-size: 92px;
+    line-height: 120%;
+
+    &--main {
+      font-size: 140px;
+      line-height: 105%;
+    }
+  }
+}

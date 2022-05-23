@@ -1,0 +1,12 @@
+:root {
+  --base-white: #fff;
+  --base-black: #303030;
+  --base-gray: #e7e7e7;
+  --base-news-gray: #e8e8e8;
+  --base-orange: #ea8c00;
+  --half-opacity-color: #c4c4c4;
+}
+$mobile: "max-width: 767px";
+$tablet: "min-width: 768px";
+$large: "min-width: 1024px";
+$desktop: "min-width: 1400px";

@@ -1,0 +1,258 @@
+.footer {
+  margin-top: 60px;
+  background-color: var(--base-gray);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  @media ($large) {
+    margin-top: 120px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+}
+
+.footer__wrapper {
+  @include wrapper;
+  padding-top: 30px;
+  padding-bottom: 25px;
+
+  @media ($large) {
+    padding-top: 60px;
+    @include grid;
+    row-gap: 60px;
+  }
+}
+
+.footer__top {
+  @include list-reset;
+  margin-bottom: 40px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  border-bottom: 2px solid var(--base-black);
+
+  @media ($large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    align-items: center;
+    margin-bottom: 0;
+    border-top: 3px solid var(--base-black);
+    border-bottom: 3px solid var(--base-black);
+  }
+}
+
+.footer__top-item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media ($large) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__logo {
+  border-top: 2px solid var(--base-black);
+  padding-top: 30px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media ($large) {
+    grid-column: col / span 2;
+    grid-row: 2 / 4;
+    padding-top: 0;
+    border-top: none;
+
+    img {
+      margin: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.footer__menu {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  @media ($large) {
+    grid-column: 4 / span 3;
+    grid-row: 2 / 4;
+    margin-bottom: 0;
+  }
+
+  @media ($desktop) {
+    grid-column: 7 / span 3;
+  }
+}
+
+.footer__menu-item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__subscribe {
+  @media ($large) {
+    grid-column: 7 / span 6;
+    grid-row: 2 / 3;
+  }
+
+  @media ($desktop) {
+    grid-column: 10 / span 3;
+  }
+}
+
+.footer__copy {
+  font-size: 13px;
+  line-height: 130%;
+  text-transform: uppercase;
+  border-top: 2px solid var(--base-black);
+
+  a {
+    color: inherit;
+  }
+
+  @media ($large) {
+    grid-column: 1 / -1;
+    display: flex;
+    column-gap: 40px;
+    font-size: 16px;
+    border-top: 3px solid var(--base-black);
+  }
+
+  @media ($desktop) {
+    font-size: 18px;
+  }
+}
+
+.footer__copy-right,
+.footer__copy-left {
+  @media ($large) {
+    width: 50%;
+  }
+}
+
+.footer__copy-right {
+  @media ($large) {
+    text-align: right;
+  }
+}
+
+.footer__user-block {
+  padding-top: 45px;
+  padding-bottom: 40px;
+  display: flex;
+  gap: 30px;
+
+  @media ($large) {
+    grid-column: 7 / span 6;
+    grid-row: 3 / 4;
+  }
+
+  @media ($desktop) {
+    grid-column: 10 / span 3;
+  }
+}
+
+.footer__link {
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--base-black);
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &--icons {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      text-shadow: 0 0 0.7px var(--base-black), 0 0 0.7px var(--base-black),
+        0 0 0.7px var(--base-black);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-right: 14px;
+      background-color: var(--base-orange);
+      border-radius: 50%;
+
+      @media ($large) {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 17px;
+      margin-left: 12px;
+      background-image: url("../images/icon-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media ($large) {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media ($large) {
+    font-size: 18px;
+
+    &--icons {
+      padding-left: 16px;
+      padding-right: 15px;
+    }
+
+    &:hover {
+      text-shadow: 0 0 0.7px var(--base-black), 0 0 0.7px var(--base-black),
+        0 0 0.7px var(--base-black);
+    }
+  }
+
+  @media ($desktop) {
+    font-size: 26px;
+  }
+}
+
+.footer__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background: transparent;
+  border: 2px solid #303030;
+  border-radius: 50%;
+  overflow: hidden;
+  text-decoration: none;
+
+  svg {
+    width: 30px;
+    height: auto;
+  }
+}

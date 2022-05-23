@@ -1,0 +1,162 @@
+---
+title: Музеи, входящие в ассоциацию
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<section class="museums">
+  <div class="museums__wrapper">
+    <h1 class="page-title">{{title}} </h1>
+    <div class="museums__search">
+      <form class="museums__search-form" action="">
+        <div class="museums__search-input-field">
+          <input type="search" name="searc" id="search" placeholder="Найти музей по его названию">
+        </div>
+        <button class="museums__search-submit-btn" type="submit">Поиск</button>
+        <button class="museums__search-reset-btn filter" type="button" data-filter="all">Сбросить</button>
+      </form>
+    </div>
+    <div class="museums__filter">
+      <div class="museums__filter-list  swiper">
+        <div class="swiper-wrapper">
+          <div class="museums__filter-item  swiper-slide  museums__filter-item--show-on-mobile"><button
+              class="museums__filter-btn  filter" type="button" data-filter="all">Все</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="А">А</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Б">Б</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="В">В</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Г">Г</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Д">Д</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Е">Е</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Ж">Ж</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="З">З</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="И">И</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="К">К</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Л">Л</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="М">М</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Н">Н</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="О">О</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="П">П</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Р">Р</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="С">С</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Т">Т</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="У">У</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Ф">Ф</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Х">Х</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Ц">Ц</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Ч">Ч</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Ш">Ш</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Щ">Щ</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Ы">Ы</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Э">Э</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Ю">Ю</button>
+          </div>
+          <div class="museums__filter-item  swiper-slide"><button class="museums__filter-btn  filter" type="button"
+              data-filter="Я">Я</button>
+          </div>
+        </div>
+        <button class="museums__filter-prev-btn" type="button">
+          <svg width="12" height="14" viewBox="0 0 14 12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="museums__filter-next-btn" type="button">
+          <svg width="12" height="14" viewBox="0 0 14 12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <ul class="museums__list  filter-list">
+      {% for item in range(0, 4) -%}
+      <li class="museums__list-item  filter-item" data-filter="в">
+        <a href="museum.html">
+          <h3 class="museums__list-item-title">Музей воинской славы г. Петропавловск-Камчатский</h3>
+          <img src="images/museums/museum-1.jpg" alt="Фотография музея" loading="lazy">
+        </a>
+      </li>
+      <li class="museums__list-item  filter-item" data-filter="к">
+        <a href="museum.html">
+          <h3 class="museums__list-item-title">Краеведческий музей Усть-Большерецкого муниципального района
+          </h3>
+          <img src="images/museums/museum-2.jpg" alt="Фотография музея" loading="lazy">
+        </a>
+      </li>
+      <li class="museums__list-item  filter-item" data-filter="т">
+        <a href="museum.html">
+          <h3 class="museums__list-item-title">Тестовое название
+          </h3>
+          <img src="images/museums/museum-2.jpg" alt="Фотография музея" loading="lazy">
+        </a>
+      </li>
+      <li class="museums__list-item  filter-item" data-filter="д">
+        <a href="museum.html">
+          <h3 class="museums__list-item-title">Музей дальнего Востока
+          </h3>
+          <img src="images/museums/museum-2.jpg" alt="Фотография музея" loading="lazy">
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

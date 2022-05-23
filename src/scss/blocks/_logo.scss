@@ -1,0 +1,13 @@
+.logo__link {
+  @media ($mobile) {
+    img {
+      width: 57px;
+      height: auto;
+    }
+    &--footer {
+      img {
+        width: 152px;
+      }
+    }
+  }
+}

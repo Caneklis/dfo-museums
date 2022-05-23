@@ -1,0 +1,15 @@
+
+<svg width="82px" height="231px" viewBox="0 0 82 231" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-7h54e5e15j-1" x="0" y="0" width="230" height="81"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="svg-ex-main-item-slider" transform="translate(41.000000, 115.500000) rotate(90.000000) translate(-41.000000, -115.500000) translate(-74.000000, 75.000000)">
+            <mask id="mask-7h54e5e15j-2" fill="white">
+                <use xlink:href="#path-7h54e5e15j-1"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <path d="M59.3994,19.6113 C67.4395,41.9932 88.8506,58 114,58 C139.149,58 160.561,41.9932 168.601,19.6113 C172.335,9.21582 180.954,0 192,0 L36,0 C47.0459,0 55.665,9.21582 59.3994,19.6113 Z M0,0 L-454,0 C-465.046,0 -474,8.9541 -474,20 L-474,761 C-474,772.046 -465.046,781 -454,781 L1392,781 C1403.05,781 1412,772.046 1412,761 L1412,20 C1412,8.9541 1403.05,0 1392,0 L230,0 L230,81 L0,81 L0,0 Z" id="Shape" fill="#303030" mask="url(#mask-7h54e5e15j-2)"></path>
+        </g>
+    </g>
+</svg>
