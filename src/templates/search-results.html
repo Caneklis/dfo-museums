@@ -1,0 +1,59 @@
+---
+title: Поиск по сайту
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="search-page">
+  <div class="search-page__wrapper">
+    <h1 class="search-page__title  page-title">{{title}} </h1>
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="index.html" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Поиск по сайту</a>
+        </li>
+      </ul>
+    </div>
+
+    <form action="" class="search-page__form">
+      <div class="search-page__input-field">
+        <input type="text" placeholder="Найти нужную страницу">
+      </div>
+      <button class="search-page__btn  btn" type="submit">Поиск</button>
+    </form>
+
+    <div class="search-page__results">
+      <h2 class="search-page__results-title">Вы искали «Партнерство» <span>5 результатов</span></h2>
+
+      <ul class="search-page__results-list">
+        {% for item in range(0, 3) -%}
+        <li class="search-page__results-item">
+          <div class="search-page__results-text">
+            <p>
+              <a href="#">Подписано соглашение о долгосрочном партнёрстве между Ассоциацией Дальневосточных музеев и
+                компанией Panasonic Россия</a>
+            </p>
+          </div>
+          <a class="search-page__results-link" href="#">Смотреть</a>
+        </li>
+        <li class="search-page__results-item">
+          <div class="search-page__results-text">
+            <p>
+              <a href="#">Подписано соглашение о долгосрочном партнёрстве c компанией Microsoft Россия</a>
+            </p>
+          </div>
+          <a class="search-page__results-link" href="#">Смотреть</a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+---
+title: Руководство и члены
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="management">
+  <div class="management__wrapper">
+    <h1 class="management__title  page-title">{{title}} </h1>
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="index.html" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="textpage.html" class="breadcrumbs__link">ассоциации</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Руководство и члены</a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="management__list">
+      {% for item in range(0, 2) -%}
+      <li class="management__item">
+        <div class="managment__item-photo">
+          <img src="https://via.placeholder.com/210x210/" alt="Фотография ФИО">
+        </div>
+        <h2>Афанасий <br>гнедовский</h2>
+        <h3>председатель</h3>
+        <p>музей истории Дальнего Востока им. А.К. Арсеньева</p>
+      </li>
+      <li class="management__item">
+        <div class="managment__item-photo">
+          <img src="https://via.placeholder.com/210x210/" alt="Фотография ФИО">
+        </div>
+        <h2>Афанасий <br>гнедовский</h2>
+        <p>Камчатский краевой объединенный музей</p>
+      </li>
+      <li class="management__item">
+        <div class="managment__item-photo">
+          <img src="https://via.placeholder.com/210x210/" alt="Фотография ФИО">
+        </div>
+        <h2>Имя <br>Фамилия</h2>
+        <p>музей Краеведческий музей Усть-Большеречского муниципального района</p>
+      </li>
+      <li class="management__item">
+        <div class="managment__item-photo">
+          <img src="images/user-placeholder.svg" alt="Фотография ФИО">
+        </div>
+        <h2>Имя <br>Фамилия</h2>
+        <p>музей Краеведческий музей Усть-Большеречского муниципального района</p>
+      </li>
+      <li class="management__item">
+        <div class="managment__item-photo">
+          <img src="images/user-placeholder.svg" alt="Фотография ФИО">
+        </div>
+        <h2>Имя <br>Фамилия</h2>
+        <p>музей Краеведческий музей Усть-Большеречского муниципального района</p>
+      </li>
+      {%- endfor %}
+    </ul>
+
+  </div>
+</section>
+
+{% endblock %}

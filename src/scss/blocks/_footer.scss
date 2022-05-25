@@ -19,7 +19,12 @@
   @media ($large) {
     padding-top: 60px;
     @include grid;
+    column-gap: 20px;
     row-gap: 60px;
+  }
+
+  @media (min-width: 1800px) {
+    column-gap: 40px;
   }
 }
 
@@ -35,11 +40,15 @@
     grid-row: 1 / 2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 40px;
+    column-gap: 20px;
     align-items: center;
     margin-bottom: 0;
     border-top: 3px solid var(--base-black);
     border-bottom: 3px solid var(--base-black);
+  }
+
+  @media (min-width: 1800px) {
+    column-gap: 40px;
   }
 }
 
@@ -234,6 +243,10 @@
   }
 
   @media ($desktop) {
+    font-size: 19px;
+  }
+
+  @media (min-width: 1800px) {
     font-size: 26px;
   }
 }
@@ -251,8 +264,13 @@
   overflow: hidden;
   text-decoration: none;
 
-  svg {
+  .icon {
     width: 30px;
     height: auto;
+
+    &--search {
+      width: 22px;
+      height: 22px;
+    }
   }
 }

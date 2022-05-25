@@ -30,6 +30,27 @@ body {
   // }
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 14px 20px 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--base-black);
+  border-radius: 70px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--base-white);
+
+  @media ($tablet) {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
 #iframe-map {
   height: 400px;
 
