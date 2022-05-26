@@ -1,0 +1,66 @@
+.download {
+  p {
+    margin: 0;
+    margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 25px;
+    }
+  }
+
+  @media ($tablet) {
+    p {
+      margin-bottom: 60px;
+
+      &:last-of-type {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+.download__list {
+  @include list-reset;
+  row-gap: 0 !important;
+}
+
+.download__item {
+  padding-left: 0 !important;
+  border-top: 2px solid var(--base-gray);
+
+  &::before {
+    display: none !important;
+  }
+
+  &:last-child {
+    border-bottom: 2px solid var(--base-gray);
+  }
+}
+
+.download__link {
+  display: block;
+  padding: 20px 40px 20px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--base-black);
+  background-image: url("../images/icon-download.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  background-size: 20px;
+
+  @media ($large) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 26px;
+    line-height: 34px;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: var(--base-gray);
+    }
+  }
+}

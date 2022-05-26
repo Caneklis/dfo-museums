@@ -1,0 +1,124 @@
+.projects__wrapper {
+  @include wrapper;
+}
+
+.projects__title {
+  margin-bottom: 40px;
+}
+
+.projects__list {
+  @include list-reset;
+  display: grid;
+  row-gap: 45px;
+  padding-top: 45px;
+  border-top: 2px solid var(--base-black);
+  overflow-x: hidden;
+
+  @media ($tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 0;
+    padding-top: 0;
+    border-top-width: 3px;
+  }
+
+  @media ($large) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    margin-bottom: -123px;
+
+    &::before {
+      left: calc(33.3% - 15px);
+      width: 3px;
+    }
+  }
+}
+
+.projects__item {
+  border-bottom: 2px solid var(--base-black);
+
+  @media ($mobile) {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media ($tablet) {
+    position: relative;
+    border-bottom: none;
+    padding-top: 45px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: calc(100% + 40px);
+      height: 3px;
+      background-color: var(--base-black);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -10px;
+      display: block;
+      width: 3px;
+      height: 100%;
+      background-color: var(--base-black);
+    }
+
+    &:last-child {
+      padding-bottom: 120px;
+    }
+  }
+
+  @media ($large) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -20px;
+      display: block;
+      width: 3px;
+      height: 100%;
+      background-color: var(--base-black);
+    }
+  }
+}
+
+.projects__link {
+  display: grid;
+  row-gap: 10px;
+  padding-bottom: 45px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--base-black);
+  transition: color 0.3s ease;
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--base-orange);
+
+    img {
+      transform: scale(1.02);
+    }
+  }
+}

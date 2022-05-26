@@ -1,0 +1,76 @@
+<script>
+  const createShareHtml = function (title, shareData) {
+    let anchorList = [];
+    const anchorTemplate = function (item) {
+      return `<a class="social-share__link" href="${item.href}" target="_blank" rel="noopener">
+              <svg class="social-share__icon">
+                <use xlink:href="images/sprite_auto.svg#icon-${item.icon}"></use>
+              </svg>
+              <span class="visually-hidden">${item.title}</span>
+              </a>`;
+      '<a href="' +
+        item.href +
+        '" target="_blank" rel="noopener">' +
+        item.title +
+        "</a>"
+    };
+    const wrapperTemplate = function (title, anchorList) {
+      return (
+        // '<div class="social-share__title">' +
+        // title +
+        // `<span class="social-share__active header__lang-link">share</span>` +
+        '</div><div class="social-share__items">' +
+        anchorList.join("") +
+        "</div>"
+      );
+    };
+    shareData.forEach(function (item) {
+      anchorList.push(anchorTemplate(item));
+    });
+    return wrapperTemplate(title, anchorList);
+  };
+
+  const $socialShare = document.querySelector(".social-share");
+  if ($socialShare) {
+    const url = encodeURIComponent(
+      location.protocol + "//" + location.host + location.pathname
+    );
+    const title = encodeURIComponent(document.title);
+    const twitterUserName = "theartsmuseum"; //для твиттера
+    const shareData = [
+      {
+        title: "ВКонтакте",
+        href: "https://vk.com/share.php?url=" + url,
+        icon: "vk",
+      },
+      {
+        title: "Facebook",
+        href: "https://www.facebook.com/sharer/sharer.php?u=" + url,
+        icon: "fb",
+      },
+      {
+        title: "Twitter",
+        href:
+          "https://twitter.com/intent/tweet?text=" +
+          title +
+          "&url=" +
+          url +
+          "&via=" +
+          twitterUserName,
+        icon: "tw",
+      },
+      {
+        title: "Ок",
+        href: "https://connect.ok.ru/offer?url=" + url + "&text=" + title,
+        icon: "ok",
+      },
+      {
+        title: "Telegram",
+        href: "https://t.me/share/url?url=" + url + "&text=" + title,
+        icon: "tg",
+      },
+    ];
+    const $html = createShareHtml("", shareData);
+    $socialShare.innerHTML = $html;
+  }
+</script>

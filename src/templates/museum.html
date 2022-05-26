@@ -7,71 +7,71 @@ page_link: index.html
 
 {% block content %}
 
-<section class="museum">
-  <div class="museum__wrapper">
-    <div class="museum__nav">
-      <a href="index.html"><svg width="10" height="12">
-          <use xlink:href="images/sprite_auto.svg#icon-arrow-left"></use>
-        </svg> На главнуя</a>
-      <a href="museums.html">Все музеи <svg width="10" height="12">
-          <use xlink:href="images/sprite_auto.svg#icon-arrow-right"></use>
-        </svg></a>
-    </div>
-    <div class="museum__photo">
-      <img class="museum__logo" src="images/museums/museum-logo.svg" alt="Логотип музея {{title}}">
-      <img src="images/museums/museum-photo.jpg" alt="Фотография музея {{title}}" loading="lazy">
-    </div>
-
-    <div class="museum__head-text">
-      <h1>{{title}}</h1>
-      <p>Музей родился в прибрежном городе Владивостоке более 130 лет назад. Он рос вместе с городом, наполнялся
-        экспонатами,
-        присоединял новые филиалы и площадки, накапливал опыт и неизменно собирал талантливых и неравнодушных людей —
-        настоящих
-        профессионалов.</p>
-      <ul class="museum__head-links">
-        <li class="museum__head-item">
-          <a href="mailto:office@arseniev.org">office@arseniev.org</a>
-        </li>
-        <li class="museum__head-item">
-          <a href="#">сайт музея
-            <svg width="18" height="18" viewBox="0 0 18 18">
-              <use xlink:href="images/sprite_auto.svg#icon-arrow-top-right"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="museum__head-item">
-          <ul class="social">
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg width="26" height="26">
-                  <use xlink:href="images/sprite_auto.svg#icon-inst"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg width="36" height="21">
-                  <use xlink:href="images/sprite_auto.svg#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg width="17" height="32">
-                  <use xlink:href="images/sprite_auto.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <section class="textpage">
   <div class="textpage__wrapper">
+    <div class="textpage__head">
+      <div class="textpage__nav">
+        <a href="index.html"><svg width="10" height="12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-left"></use>
+          </svg> На главнуя</a>
+        <a href="museums.html">Все музеи <svg width="10" height="12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-right"></use>
+          </svg></a>
+      </div>
+      <div class="textpage__photo  textpage__photo--left">
+        <img class="textpage__head-photo-logo" src="images/museums/museum-logo.svg" alt="Логотип музея {{title}}">
+        <picture>
+          <source srcset="images/museums/museum-photo.jpg" media="(min-width: 1024px)">
+          <img src="images/museums/museum-photo-small.jpg" alt="Фотография музея {{title}}" loading="lazy">
+        </picture>
+      </div>
+      <div class="textpage__head-text  textpage__head-text--right">
+        <h1>{{title}}</h1>
+        <p>Музей родился в прибрежном городе Владивостоке более 130 лет назад. Он рос вместе с городом, наполнялся
+          экспонатами,
+          присоединял новые филиалы и площадки, накапливал опыт и неизменно собирал талантливых и неравнодушных людей —
+          настоящих
+          профессионалов.</p>
+
+        <ul class="textpage__head-links">
+          <li class="textpage__head-item">
+            <a href="mailto:office@arseniev.org">office@arseniev.org</a>
+          </li>
+          <li class="textpage__head-item">
+            <a href="#">сайт музея
+              <svg width="18" height="18" viewBox="0 0 18 18">
+                <use xlink:href="images/sprite_auto.svg#icon-arrow-top-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="textpage__head-item">
+            <ul class="social">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg width="26" height="26">
+                    <use xlink:href="images/sprite_auto.svg#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg width="36" height="21">
+                    <use xlink:href="images/sprite_auto.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg width="17" height="32">
+                    <use xlink:href="images/sprite_auto.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="textpage__content">
       <div class="textpage__left">
         <h2 class="textpage__section-title">музей на карте</h2>
@@ -122,7 +122,6 @@ page_link: index.html
           темы.</p>
       </div>
     </div>
-
 
     <div class="textpage__slider  swiper" dir="rtl">
       <div class="swiper-controls">
@@ -269,84 +268,7 @@ page_link: index.html
       </div>
       <div class="textpage__right">
         <div class="social-share">
-          <script>
-            const createShareHtml = function (title, shareData) {
-              let anchorList = [];
-              const anchorTemplate = function (item) {
-                return `<a class="social-share__link" href="${item.href}" target="_blank" rel="noopener">
-        <svg class="social-share__icon">
-          <use xlink:href="images/sprite_auto.svg#icon-${item.icon}"></use>
-        </svg>
-        <span class="visually-hidden">${item.title}</span>
-        </a>`;
-                '<a href="' +
-                  item.href +
-                  '" target="_blank" rel="noopener">' +
-                  item.title +
-                  "</a>"
-              };
-              const wrapperTemplate = function (title, anchorList) {
-                return (
-                  // '<div class="social-share__title">' +
-                  // title +
-                  // `<span class="social-share__active header__lang-link">share</span>` +
-                  '</div><div class="social-share__items">' +
-                  anchorList.join("") +
-                  "</div>"
-                );
-              };
-              shareData.forEach(function (item) {
-                anchorList.push(anchorTemplate(item));
-              });
-              return wrapperTemplate(title, anchorList);
-            };
-
-            const $socialShare = document.querySelector(".social-share");
-            if ($socialShare) {
-              const url = encodeURIComponent(
-                location.protocol + "//" + location.host + location.pathname
-              );
-              const title = encodeURIComponent(document.title);
-              const twitterUserName = "theartsmuseum"; //для твиттера
-              const shareData = [
-                {
-                  title: "ВКонтакте",
-                  href: "https://vk.com/share.php?url=" + url,
-                  icon: "vk",
-                },
-                {
-                  title: "Facebook",
-                  href: "https://www.facebook.com/sharer/sharer.php?u=" + url,
-                  icon: "fb",
-                },
-                {
-                  title: "Twitter",
-                  href:
-                    "https://twitter.com/intent/tweet?text=" +
-                    title +
-                    "&url=" +
-                    url +
-                    "&via=" +
-                    twitterUserName,
-                  icon: "tw",
-                },
-                {
-                  title: "Ок",
-                  href: "https://connect.ok.ru/offer?url=" + url + "&text=" + title,
-                  icon: "ok",
-                },
-                {
-                  title: "Telegram",
-                  href: "https://t.me/share/url?url=" + url + "&text=" + title,
-                  icon: "tg",
-                },
-              ];
-              const $html = createShareHtml("", shareData);
-              $socialShare.innerHTML = $html;
-            }
-          </script>
-
-
+          {% include "./_partials/_social-share-script.html" %}
           <div class="copylink">
             <button class="copylink__btn">
               Скопировать ссылку

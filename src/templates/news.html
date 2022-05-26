@@ -1,0 +1,107 @@
+---
+title: Новости
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="news">
+  <div class="news__wrapper">
+    <h1 class="page-title">{{title}}</h1>
+    <div class="news__filter">
+      <div class="news__filter-type">
+        <a class="news__filter-type-btn  is-active" href="#">Все</a>
+        <a class="news__filter-type-btn" href="#">ассоциация</a>
+        <a class="news__filter-type-btn" href="#">Фонд</a>
+      </div>
+
+      <div class="news__slider-filter  swiper">
+        <button class="news__slider-filter-prev-btn" type="button">
+          <svg width="12" height="14" viewBox="0 0 14 12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#" class="is-active">все</a></div>
+          <div class="swiper-slide"><a href="#">2022</a></div>
+          <div class="swiper-slide"><a href="#">2021</a></div>
+          <div class="swiper-slide"><a href="#">2020</a></div>
+          <div class="swiper-slide"><a href="#">2019</a></div>
+          <div class="swiper-slide"><a href="#">2018</a></div>
+        </div>
+        <button class="news__slider-filter-next-btn" type="button">
+          <svg width="12" height="14" viewBox="0 0 14 12">
+            <use xlink:href="images/sprite_auto.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <ul class="news__list">
+      {% for item in range(0, 2) -%}
+      <div class="news__item  news__item--fund">
+        <a href="news-item.html">
+          <div class="news__type">Фонд</div>
+          <div class="news__photo">
+            <img src="images/news-photo-1.jpg" alt="Описание фото" loading="lazy">
+          </div>
+          <div class="news__item-date">21 января 2022</div>
+          <div class="news__item-descr">
+            <p>Подписано соглашение о долгосрочном партнёрстве между Ассоциацией Дальневосточных музеев и компанией
+              Panasonic Россия</p>
+          </div>
+        </a>
+      </div>
+      <div class="news__item  news__item--association">
+        <a href="news-item.html">
+          <div class="news__type">ассоциация</div>
+          <div class="news__photo">
+            <img src="images/news-photo-2.jpg" alt="Описание фото" loading="lazy">
+          </div>
+          <div class="news__item-date">21 января 2022 - 12 марта 2022</div>
+          <div class="news__item-descr">
+            <p>Подписано соглашение о долгосрочном партнёрстве c компанией Microsoft Россия</p>
+          </div>
+        </a>
+      </div>
+      <div class="news__item"><a href="news-item.html">
+          <div class="news__type">Фонд</div>
+          <div class="news__photo">
+            <img src="images/news-photo-1.jpg" alt="Описание фото" loading="lazy">
+          </div>
+          <div class="news__item-date">21 января 2022</div>
+          <div class="news__item-descr">
+            <p>Подписано соглашение о долгосрочном партнёрстве между Ассоциацией Дальневосточных музеев и компанией
+              Panasonic Россия
+              (заголовок новости)</p>
+          </div>
+        </a>
+      </div>
+      <div class="news__item">
+        <a href="news-item.html">
+          <div class="news__type">ассоциация</div>
+          <div class="news__photo">
+            <img src="images/news-photo-2.jpg" alt="Описание фото" loading="lazy">
+          </div>
+          <div class="news__item-date">21 января 2022 - 12 марта 2022</div>
+          <div class="news__item-descr">
+            <p>Подписано соглашение о долгосрочном партнёрстве c компанией Microsoft Россия</p>
+          </div>
+        </a>
+      </div>
+      {%- endfor %}
+    </ul>
+
+    <button class="news__list-load-more" type="button">
+      показать еще
+      <svg width="20" height="24" viewBox="0 0 20 24">
+        <use xlink:href="images/sprite_auto.svg#icon-arrow-bottom"></use>
+      </svg>
+    </button>
+  </div>
+</section>
+
+
+{% endblock %}

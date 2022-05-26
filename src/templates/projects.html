@@ -1,0 +1,73 @@
+---
+title: Проекты
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="projects">
+  <div class="projects__wrapper">
+    <h1 class="projects__title  page-title">{{title}}</h1>
+
+    <ul class="projects__list">
+      <li class="projects__item">
+        <a class="projects__link" href="#">
+          <p>исследования</p>
+          <picture>
+            <source srcset="images/projects/project-pic-1-large.jpg" media="(min-width: 1024px)">
+            <img src="images/projects/project-pic-1.jpg" alt="Описание изображения">
+          </picture>
+        </a>
+      </li>
+      <li class="projects__item">
+        <a class="projects__link" href="#">
+          <p>конференции</p>
+          <picture>
+            <source srcset="images/projects/project-pic-2-large.jpg" media="(min-width: 1024px)">
+            <img src="images/projects/project-pic-2.jpg" alt="Описание изображения">
+          </picture>
+        </a>
+      </li>
+      <li class="projects__item">
+        <a class="projects__link" href="#">
+          <p>образование</p>
+          <picture>
+            <source srcset="images/projects/project-pic-3-large.jpg" media="(min-width: 1024px)">
+            <img src="images/projects/project-pic-3.jpg" alt="Описание изображения">
+          </picture>
+        </a>
+      </li>
+      <li class="projects__item">
+        <a class="projects__link" href="#">
+          <p>конференции</p>
+          <picture>
+            <source srcset="images/projects/project-pic-4-large.jpg" media="(min-width: 1024px)">
+            <img src="images/projects/project-pic-4.jpg" alt="Описание изображения">
+          </picture>
+        </a>
+      </li>
+      <li class="projects__item">
+        <a class="projects__link" href="#">
+          <p>исследования</p>
+          <picture>
+            <source srcset="images/projects/project-pic-5-large.jpg" media="(min-width: 1024px)">
+            <img src="images/projects/project-pic-5.jpg" alt="Описание изображения">
+          </picture>
+        </a>
+      </li>
+      <li class="projects__item">
+        <a class="projects__link" href="#">
+          <p>образование</p>
+          <picture>
+            <source srcset="images/projects/project-pic-6-large.jpg" media="(min-width: 1024px)">
+            <img src="images/projects/project-pic-6.jpg" alt="Описание изображения">
+          </picture>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

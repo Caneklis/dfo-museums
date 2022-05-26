@@ -10,7 +10,9 @@ html {
 
 body {
   margin: 0;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,10 +46,40 @@ body {
   font-size: 18px;
   line-height: 23px;
   color: var(--base-white);
+  border: none;
+  cursor: pointer;
 
   @media ($tablet) {
     font-size: 22px;
     line-height: 29px;
+
+    &:hover {
+      background-color: #4c4c4c;
+    }
+
+    &:active,
+    &:disabled {
+      background-color: #bbbbbb;
+    }
+  }
+}
+
+.responsive-table {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #d8d8d8;
+    border-radius: 10px;
   }
 }
 

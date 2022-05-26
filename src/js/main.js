@@ -12,9 +12,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const map = new mapboxgl.Map({
       container: "map", // container ID
       style: "mapbox://styles/mapbox/streets-v11", // style URL
-      center: [-74.5, 40], // starting position [lng, lat]
-      zoom: 9, // starting zoom
+      center: [158.0056858370474, 54.6124094160279], // starting position [lng, lat]
+      zoom: 4, // starting zoom
     });
+
+    // add markers to map
+    for (const feature of geojson.features) {
+      // create a HTML element for each feature
+      const el = document.createElement("a");
+      el.className = "marker";
+      el.setAttribute("href", feature.link);
+      el.addEventListener("click", () => {
+        console.log(feature.link);
+        // window.location.href = toString(el.features.type);
+      });
+
+      // make a marker for each feature and add to the map
+      new mapboxgl.Marker(el)
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
+    }
   }
 
   // breakpoint where swiper will be destroyed
@@ -106,6 +123,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
     breakpoints: {
       768: {
         slidesPerView: 3,
+      },
+    },
+  });
+
+  const newsFilterSlider = new Swiper(".news__slider-filter", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    navigation: {
+      nextEl: ".news__slider-filter-next-btn",
+      prevEl: ".news__slider-filter-prev-btn",
+    },
+  });
+
+  const textpageMainSlider = new Swiper(".textpage__main-slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoHeight: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".textpage__main-slider-next-btn",
+      prevEl: ".textpage__main-slider-prev-btn",
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 40,
       },
     },
   });

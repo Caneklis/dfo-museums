@@ -53,6 +53,20 @@
       height: 107px;
     }
   }
+
+  .marker {
+    background-image: url("../images/marker.svg");
+    background-size: cover;
+    cursor: pointer;
+
+    width: 35px;
+    height: 46px;
+
+    @media ($large) {
+      width: 62px;
+      height: 82px;
+    }
+  }
 }
 
 .map__text {

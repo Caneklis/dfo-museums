@@ -1,0 +1,75 @@
+---
+title: Документы
+description: Description index
+page_link: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="textpage">
+  <div class="textpage__wrapper">
+    <h1 class="page-title">{{title}}</h1>
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="index.html" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="textpage.html" class="breadcrumbs__link">Об ассоциации</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Документы</a>
+        </li>
+      </ul>
+    </div>
+    <div class="textpage__content">
+      <div class="textpage__left">
+        <h2 class="textpage__section-title">Организационные <br>документы</h2>
+      </div>
+
+      <div class="textpage__right">
+        <div class="download">
+          <p>Президиум является высшим коллегиальным руководящим органом в период между Общими собраниями. Члены
+            Президиума
+            избираются сроком на четыре года из числа членов Ассоциации и не могут быть избраны более, чем на два срока.
+          </p>
+
+          <ul class="download__list">
+            {% for item in range(0, 4) -%}
+            <li class="download__item">
+              <a class="download__link" href="#">Устав ассоциации музеев дальнего востока (pdf)</a>
+            </li>
+            <li class="download__item">
+              <a class="download__link" href="#">все музеи ассоциации дальневосточных музеев (xlsx)</a>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="textpage__content">
+      <div class="textpage__left">
+        <h2 class="textpage__section-title">Отчеты</h2>
+      </div>
+
+      <div class="textpage__right">
+        <div class="download">
+          <ul class="download__list">
+            {% for item in range(0, 4) -%}
+            <li class="download__item">
+              <a class="download__link" href="#">Устав ассоциации музеев дальнего востока (pdf)</a>
+            </li>
+            <li class="download__item">
+              <a class="download__link" href="#">все музеи ассоциации дальневосточных музеев (xlsx)</a>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

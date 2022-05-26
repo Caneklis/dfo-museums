@@ -101,6 +101,30 @@
 
   </script>
   <!-- Скрипты только для страницы музея  -->
+
+  <!-- Точки музеев только для главной страницы -->
+  <script>
+    const geojson = {
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'museum',
+          link: 'museum.html',
+          geometry: {
+            coordinates: [159.55, 56.52]
+          },
+        },
+        {
+          type: 'museum',
+          link: 'museum.html',
+          geometry: {
+            coordinates: [157.24, 52.05]
+          },
+        }
+      ]
+    };
+  </script>
+  <!-- Точки музеев только для главной страницы -->
   <!-- END scripts -->
 
 </body>

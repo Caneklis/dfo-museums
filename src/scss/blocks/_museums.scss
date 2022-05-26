@@ -273,12 +273,16 @@
 .museums__search-input-field {
   width: 100%;
   height: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 10px;
+  align-items: center;
 
   input {
     width: 100%;
-    height: 100%;
-    padding: 18px;
-    padding-left: 70px;
+    height: 50px;
+    padding: 13px 18px 13px 56px;
     border: 2px solid #d7d7d7;
     border-radius: 100px;
     font-family: inherit;
@@ -287,10 +291,41 @@
     line-height: 140%;
     color: var(--base-black);
     outline: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-color: transparent;
+    grid-column: 2 / 3;
 
     &::placeholder {
       color: #d7d7d7;
       opacity: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 52px;
+    top: 0;
+    display: block;
+    width: 20px;
+    height: 50px;
+    background-image: url("../images/svg-line-search.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media ($tablet) {
+      left: 68px;
+      width: 25px;
+      height: 70px;
+    }
+  }
+
+  @media ($tablet) {
+    grid-template-columns: 70px 1fr;
+
+    input {
+      height: 70px;
     }
   }
 
@@ -308,9 +343,6 @@
 
     &::before {
       content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
       display: block;
       width: 70px;
       height: 70px;
@@ -342,6 +374,11 @@
   background-position: center center;
   font-size: 0;
 
+  @media ($tablet) {
+    width: 70px;
+    height: 70px;
+  }
+
   @media ($large) {
     margin-right: 10px;
     padding: 0;
@@ -357,6 +394,7 @@
     background-image: none;
     font-family: inherit;
     text-transform: uppercase;
+    bottom: none;
   }
 }
 

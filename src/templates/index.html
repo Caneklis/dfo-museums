@@ -132,10 +132,16 @@ page_link: index.html
     <section class="partners">
       <ul class="partners__list">
         {% for item in range(0, 3) -%}
-        <li class="partners__item"><a href="#" class="partners__link"><img src="images/partners/kultura_rf.svg"
-              alt="Логотип партнера Название партнера" loading="lazy"></a></li>
-        <li class="partners__item"><a href="#" class="partners__link"><img src="images/partners/minkult_rus_logo.svg"
-              alt="Логотип партнера Название партнера" loading="lazy"></a></li>
+        <li class="partners__item">
+          <a href="#" class="partners__link">
+            <img src="images/partners/kultura_rf.svg" alt="Логотип партнера Название партнера" loading="lazy">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a href="#" class="partners__link">
+            <img src="images/partners/minkult_rus_logo.svg" alt="Логотип партнера Название партнера" loading="lazy">
+          </a>
+        </li>
         {%- endfor %}
       </ul>
     </section>
