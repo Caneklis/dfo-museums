@@ -47,6 +47,10 @@
     text-transform: uppercase;
     color: var(--base-black);
     text-decoration: none;
+
+    @media ($large) {
+      font-size: 18px;
+    }
   }
 
   @media ($large) {
