@@ -1,12 +1,12 @@
 <nav class="main-nav">
   <div class="logo">
-    <a class="logo__link" href="index.html"><img src="images/logo.svg" alt="Логотип"></a>
+    <a class="logo__link" href="index.html"><img src="/images/logo.svg" alt="Логотип"></a>
   </div>
   <button class="main-nav__toggle" type="button" aria-expanded="false" aria-controls="main-nav__menu"
-    aria-label="Открыть меню">
+          aria-label="Открыть меню">
     <svg class="main-nav__icon" width="50" height="50">
-      <use class="main-nav__icon-menu" xlink:href="images/sprite_auto.svg#icon-menu"></use>
-      <use class="main-nav__icon-close" xlink:href="images/sprite_auto.svg#icon-cross"></use>
+      <use class="main-nav__icon-menu" xlink:href="/images/sprite_auto.svg#icon-menu"></use>
+      <use class="main-nav__icon-close" xlink:href="/images/sprite_auto.svg#icon-cross"></use>
     </svg>
   </button>
   <div class="main-nav__menu">
@@ -15,7 +15,7 @@
       {% for item in menu.list %}
       <li class="main-nav__item">
         <a class="main-nav__link {% if page_link == item.link %}main-nav__link--active{% endif %}"
-          href="{{item.link}}">{{item.title}}</a>
+           href="{{item.link}}">{{item.title}}</a>
         <ul class="main-nav__sublist">
           <li class="main-nav__subitem"><a class="main-nav__sublink" href="#">Миссия ассоциации</a></li>
           <li class="main-nav__subitem"><a class="main-nav__sublink" href="management.html">Руководство</a></li>
@@ -28,7 +28,7 @@
 
     <ul class="main-nav__user-block">
       <li class="main-nav__item  main-nav__item--lang"><a class="main-nav__link  main-nav__link--half-opacity"
-          href="#">EN</a></li>
+           href="#">EN</a></li>
       <li class="main-nav__item"><a class="main-nav__link  main-nav__link--with-arrow" href="#">Вступить</a></li>
     </ul>
   </div>
