@@ -4,7 +4,7 @@
     font-weight: $weight;
     font-style: $style;
     font-display: swap;
-    src: url("../fonts/" + $path + ".woff2") format("woff2");
+    src: url('../fonts/' + $path + '.woff2') format('woff2');
   }
 }
 
@@ -48,11 +48,21 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: calc(120 / 1920 * 100%);
-  padding-right: calc(120 / 1920 * 100%);
+  // padding-left: calc(120 / 1920 * 100%);
+  // padding-right: calc(120 / 1920 * 100%);
+  padding-left: calc(20 / 375 * 100%);
+  padding-right: calc(20 / 375 * 100%);
 
   @media ($mobile) {
-    padding-left: calc(20 / 375 * 100%);
-    padding-right: calc(20 / 375 * 100%);
+  }
+
+  // @media ($desktop) {
+  //   padding-left: 120px;
+  //   padding-right: 120px;
+  // }
+
+  @media ($desktop-large) {
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }

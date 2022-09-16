@@ -4,7 +4,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development gulp"
+    "start": "cross-env NODE_ENV=development gulp",
+    "prod": "cross-env NODE_ENV=production gulp"
   },
   "keywords": [],
   "author": "",
@@ -44,6 +45,7 @@
   },
   "description": "",
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "mapbox-gl": "^2.8.2",
     "swiper": "^8.1.5"
   }
