@@ -1,18 +1,18 @@
-import { openMenu } from './modules/menu.js';
-import mapboxgl from '../../node_modules/mapbox-gl/dist/mapbox-gl';
-import Swiper from 'swiper/bundle';
-import { Fancybox } from '@fancyapps/ui';
+import { openMenu } from "./modules/menu.js";
+import mapboxgl from "../../node_modules/mapbox-gl/dist/mapbox-gl";
+import Swiper from "swiper/bundle";
+import { Fancybox } from "@fancyapps/ui";
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener("DOMContentLoaded", function (event) {
   openMenu();
 
   mapboxgl.accessToken =
-    'pk.eyJ1IjoiY2FuZWtsaXMiLCJhIjoiY2tqc2g2bWk1M3pyODJ6bG9jNTlicG1qbSJ9.kAq6U0hW3k2xL5j7paZWcg';
+    "pk.eyJ1IjoiY2FuZWtsaXMiLCJhIjoiY2tqc2g2bWk1M3pyODJ6bG9jNTlicG1qbSJ9.kAq6U0hW3k2xL5j7paZWcg";
 
-  if (document.querySelector('#map')) {
+  if (document.querySelector("#map")) {
     const map = new mapboxgl.Map({
-      container: 'map', // container ID
-      style: 'mapbox://styles/mapbox/streets-v11', // style URL
+      container: "map", // container ID
+      style: "mapbox://styles/mapbox/streets-v11", // style URL
       center: [158.0056858370474, 54.6124094160279], // starting position [lng, lat]
       zoom: 4, // starting zoom
     });
@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // add markers to map
     for (const feature of geojson.features) {
       // create a HTML element for each feature
-      const el = document.createElement('a');
-      el.className = 'marker';
-      el.setAttribute('href', feature.link);
-      el.addEventListener('click', () => {
+      const el = document.createElement("a");
+      el.className = "marker";
+      el.setAttribute("href", feature.link);
+      el.addEventListener("click", () => {
         console.log(feature.link);
         // window.location.href = toString(el.features.type);
       });
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   // breakpoint where swiper will be destroyed
   // and switches to a dual-column layout
-  const breakpoint = window.matchMedia('(min-width:768px)');
+  const breakpoint = window.matchMedia("(min-width:31.25em)");
 
   // keep track of swiper instances to destroy later
   let newsSlider;
@@ -61,28 +61,30 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
   };
 
+  breakpoint.addListener(breakpointChecker);
+
   const enableSwiper = function () {
-    const newsSlider = new Swiper('.news__slider', {
+    const newsSlider = new Swiper(".news__slider", {
       slidesPerView: 1,
       spaceBetween: 30,
       pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination",
         clickable: true,
-        type: 'fraction',
+        type: "fraction",
       },
       navigation: {
-        prevEl: '.swiper-prev-btn',
-        nextEl: '.swiper-next-btn',
+        prevEl: ".swiper-prev-btn",
+        nextEl: ".swiper-next-btn",
       },
     });
 
-    const alphabethSlider = new Swiper('.museums__filter-list', {
-      slidesPerView: 'auto',
+    const alphabethSlider = new Swiper(".museums__filter-list", {
+      slidesPerView: "auto",
       spaceBetween: 30,
       freeMode: true,
       navigation: {
-        prevEl: '.museums__filter-prev-btn',
-        nextEl: '.museums__filter-next-btn',
+        prevEl: ".museums__filter-prev-btn",
+        nextEl: ".museums__filter-next-btn",
       },
     });
   };
@@ -93,15 +95,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
   // kickstart
   breakpointChecker();
 
-  const textpageSlider = new Swiper('.textpage__slider', {
+  const textpageSlider = new Swiper(".textpage__slider", {
     slidesPerView: 1,
     pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
+      el: ".swiper-pagination",
+      type: "fraction",
     },
     navigation: {
-      nextEl: '.swiper-next-btn',
-      prevEl: '.swiper-prev-btn',
+      nextEl: ".swiper-next-btn",
+      prevEl: ".swiper-prev-btn",
     },
     paginationClickable: true,
     breakpoints: {
@@ -115,11 +117,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     },
   });
 
-  const mainItemSlider = new Swiper('.main-item__items-slider', {
+  const mainItemSlider = new Swiper(".main-item__items-slider", {
     slidesPerView: 1.5,
     spaceBetween: 40,
     navigation: {
-      nextEl: '.main-item__items-slider-next-btn',
+      nextEl: ".main-item__items-slider-next-btn",
     },
     breakpoints: {
       768: {
@@ -128,27 +130,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
     },
   });
 
-  const newsFilterSlider = new Swiper('.news__slider-filter', {
+  const newsFilterSlider = new Swiper(".news__slider-filter", {
     slidesPerView: 4,
     spaceBetween: 20,
     freeMode: true,
     navigation: {
-      nextEl: '.news__slider-filter-next-btn',
-      prevEl: '.news__slider-filter-prev-btn',
+      nextEl: ".news__slider-filter-next-btn",
+      prevEl: ".news__slider-filter-prev-btn",
     },
   });
 
-  const textpageMainSlider = new Swiper('.textpage__main-slider', {
+  const textpageMainSlider = new Swiper(".textpage__main-slider", {
     slidesPerView: 1,
     spaceBetween: 20,
     autoHeight: true,
     pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
+      el: ".swiper-pagination",
+      type: "fraction",
     },
     navigation: {
-      nextEl: '.textpage__main-slider-next-btn',
-      prevEl: '.textpage__main-slider-prev-btn',
+      nextEl: ".textpage__main-slider-next-btn",
+      prevEl: ".textpage__main-slider-prev-btn",
     },
     breakpoints: {
       768: {
@@ -158,34 +160,34 @@ document.addEventListener('DOMContentLoaded', function (event) {
   });
 
   /* Search Bar */
-  const searchInput = document.querySelector('#search');
+  const searchInput = document.querySelector("#search");
 
   if (searchInput) {
-    searchInput.addEventListener('keyup', function (e) {
+    searchInput.addEventListener("keyup", function (e) {
       // UI Element
-      let namesLI = document.getElementsByClassName('museums__list-item-title');
+      let namesLI = document.getElementsByClassName("museums__list-item-title");
 
       // Get Search Query
-      let searchQuery = document.querySelector('#search').value.toLowerCase();
+      let searchQuery = document.querySelector("#search").value.toLowerCase();
 
       // Search Compare & Display
       for (let index = 0; index < namesLI.length; index++) {
         const name = namesLI[index].textContent.toLowerCase();
 
         if (name.includes(searchQuery)) {
-          namesLI[index].parentNode.parentNode.style.display = 'block';
+          namesLI[index].parentNode.parentNode.style.display = "block";
         } else {
-          namesLI[index].parentNode.parentNode.style.display = 'none';
+          namesLI[index].parentNode.parentNode.style.display = "none";
         }
       }
     });
   }
 
-  const filters = document.querySelectorAll('.filter');
+  const filters = document.querySelectorAll(".filter");
 
   filters.forEach((filter) => {
-    filter.addEventListener('click', function () {
-      let selectedFilter = filter.getAttribute('data-filter').toLowerCase();
+    filter.addEventListener("click", function () {
+      let selectedFilter = filter.getAttribute("data-filter").toLowerCase();
 
       let itemsToHide = document.querySelectorAll(
         `.filter-list .filter-item:not([data-filter='${selectedFilter}'])`
@@ -194,30 +196,30 @@ document.addEventListener('DOMContentLoaded', function (event) {
         `.filter-list [data-filter='${selectedFilter}']`
       );
 
-      if (selectedFilter == 'all') {
+      if (selectedFilter == "all") {
         itemsToHide = [];
-        itemsToShow = document.querySelectorAll('.filter-list [data-filter]');
+        itemsToShow = document.querySelectorAll(".filter-list [data-filter]");
       }
 
       itemsToHide.forEach((el) => {
-        el.style.display = 'none';
+        el.style.display = "none";
       });
 
       itemsToShow.forEach((el) => {
-        el.style.display = 'block';
+        el.style.display = "block";
       });
     });
   });
 
-  const copyLinkBtn = document.querySelector('.copylink__btn');
+  const copyLinkBtn = document.querySelector(".copylink__btn");
 
   if (copyLinkBtn) {
-    copyLinkBtn.addEventListener('click', () => {
+    copyLinkBtn.addEventListener("click", () => {
       navigator.clipboard.writeText(window.location.href);
-      document.querySelector('.copylink__text').classList.add('is-active');
+      document.querySelector(".copylink__text").classList.add("is-active");
       setTimeout(() => {
         document
-          .querySelectorAll('.copylink__text')
+          .querySelectorAll(".copylink__text")
           .forEach((el) => el.remove());
       }, 3000);
     });
